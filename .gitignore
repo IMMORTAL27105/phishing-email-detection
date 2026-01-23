@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# ML artifacts (optional: commit later if needed)
+*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Chrome extension build junk
+*.log
+
+# Datasets
+backend/data/
+*.csv
