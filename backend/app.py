@@ -250,6 +250,11 @@ def analyze_email(email: EmailData):
     text = f"{email.subject} {email.body}"
     text_lower = text.lower()
 
+    print("=== MODULE 2 OUTPUT ===\n", {
+    "text": text,
+    "text_lower": text_lower
+    })
+
     content_score, vec = compute_content_score(text)
     sender_score = compute_sender_score(email)
     link_score = compute_link_score(email, text)
@@ -282,11 +287,12 @@ def analyze_email(email: EmailData):
         "conflict": conflict_reasons
     }
 
-    print("=== FINAL INTELLIGENT SYSTEM ===")
+    print("=== MODULE 3 OUTPUT ===")
     print("Content:", content_score)
     print("Sender:", sender_score)
     print("Link:", link_score)
     print("Context:", context_score)
+    print("=== MODULE 4 OUTPUT ===")
     print("Final:", final_score)
     print("Level:", level)
     print("Conflict Reasons:", conflict_reasons)
